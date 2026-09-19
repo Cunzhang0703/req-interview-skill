@@ -87,10 +87,10 @@ for f in "$WB" "$OA"; do
     fail "$f 五态决策记录措辞被改动"
   fi
 
-  if grep -q '直接标“待决定”' "$f"; then
-    pass "$f 图示未知项沿用决策记录原词（待决定）"
+  if grep -q '直接标“待确认”' "$f"; then
+    pass "$f 图示未知项使用源文件口径（待确认）"
   else
-    fail "$f 图示未知项标记未沿用决策记录原词——会出现同一状态两种叫法"
+    fail "$f 图示未知项标记被改动（应为待确认）"
   fi
 done
 
