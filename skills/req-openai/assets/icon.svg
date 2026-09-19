@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="开发前需求访谈">
+  <rect width="64" height="64" rx="14" fill="#4F46E5"/>
+  <path d="M18 20h28a4 4 0 0 1 4 4v16a4 4 0 0 1-4 4H30l-8 7v-7h-4a4 4 0 0 1-4-4V24a4 4 0 0 1 4-4z"
+        fill="none" stroke="#FFFFFF" stroke-width="3.2" stroke-linejoin="round"/>
+  <path d="M29.6 28.4c0-2.5 2.1-4.3 4.9-4.3s4.7 1.7 4.7 4.2c0 2.9-3 3.5-3 5.7"
+        fill="none" stroke="#FFFFFF" stroke-width="3.2" stroke-linecap="round"/>
+  <circle cx="36.2" cy="39.4" r="2.2" fill="#FFFFFF"/>
+</svg>

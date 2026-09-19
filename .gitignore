@@ -1,0 +1,26 @@
+# 操作系统杂物
+.DS_Store
+.DS_Store?
+._*
+Thumbs.db
+Desktop.ini
+desktop.ini
+
+# 编辑器 / IDE
+.idea/
+*.swp
+*.swo
+*~
+
+# 常见运行时残留（本仓库无代码依赖，仅防误提交）
+node_modules/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+*.log
+
+# 本地预览 / 打包产物
+*.zip
+!site_source_*.zip
+dist/
+build/
