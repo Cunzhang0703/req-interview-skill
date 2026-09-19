@@ -30,5 +30,5 @@ _暂无。_
 - **不使用虚构的成熟度指标**：以 7 条可检查的收口条件替代「需求成熟度 95%」这类无法验证的说法。
 - **不接管后续流程**：需求确认 ≠ 开发计划确认，且不宣称已切换计划模式。
 
-[未发布]: https://github.com/Cunzhang0703/req-skill/compare/v1.0.0...HEAD
-[1.0.0]: https://github.com/Cunzhang0703/req-skill/releases/tag/v1.0.0
+[未发布]: https://github.com/Cunzhang0703/req-interview-skill/compare/v1.0.0...HEAD
+[1.0.0]: https://github.com/Cunzhang0703/req-interview-skill/releases/tag/v1.0.0

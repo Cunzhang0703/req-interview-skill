@@ -2,8 +2,8 @@ blank_issues_enabled: false
 
 contact_links:
   - name: 使用问题 / 装不上
-    url: https://github.com/Cunzhang0703/req-skill/blob/main/docs/install-workbuddy.md
+    url: https://github.com/Cunzhang0703/req-interview-skill/blob/main/docs/install-workbuddy.md
     about: 安装、目录结构、技能不显示等问题请先看安装文档
   - name: 想改进 SKILL.md
-    url: https://github.com/Cunzhang0703/req-skill/blob/main/CONTRIBUTING.md
+    url: https://github.com/Cunzhang0703/req-interview-skill/blob/main/CONTRIBUTING.md
     about: 改行为规则前请先读贡献指南（附实测证据的要求）
