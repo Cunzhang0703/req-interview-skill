@@ -43,7 +43,7 @@
 ## 仓库结构
 
 ```text
-req-skill/
+.
 ├── skills/
 │   ├── req-workbuddy/          ← WorkBuddy 安装版
 │   │   ├── SKILL.md            全部行为规则（含原生选择弹窗提问约定）

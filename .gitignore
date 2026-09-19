@@ -21,6 +21,5 @@ __pycache__/
 
 # 本地预览 / 打包产物
 *.zip
-!site_source_*.zip
 dist/
 build/
