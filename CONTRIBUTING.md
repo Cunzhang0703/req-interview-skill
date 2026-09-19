@@ -30,13 +30,20 @@
 | §8 确认方式 | 明确用 `AskUserQuestion` 收集范围反馈 | 写为"宿主的结构化提问工具（没有则普通提问）" |
 | §9 模式切换 | 「由用户在 WorkBuddy 里自行切换」 | 「由用户自行在宿主中切换」 |
 
-改一处，就要检查另一处。提 PR 前用这条命令自查，输出应为空或只命中上表四处：
+改一处，就要检查另一处。提 PR 前运行仓库自带的校验脚本：
 
 ```bash
-diff skills/req-workbuddy/SKILL.md skills/req-openai/SKILL.md
+bash scripts/check-skill.sh
 ```
 
-`assets/icon.svg` 两版必须完全相同（当前 MD5 一致）。改动图标要同时更新两处。
+它先按**内容特征**把上表允许不同的位置归一化，再比对两版全文——所以插入或删除无关行不会误报，**只有清单外的真差异才会失败**。脚本同时校验结构不变量（章节数、§7 七条、§4 八视角、五态措辞）、图标一致性、行尾与技能正文卫生。
+
+同一份脚本会在每次推送和 PR 上由 CI 自动执行，见 `.github/workflows/check-skill.yml`。
+
+> **不要用 `diff skills/req-workbuddy/SKILL.md skills/req-openai/SKILL.md` 人眼数差异块。**
+> 两版实际有 6 个差异块而非 4 个——上表第 2 行「§3 小节标题与正文」落在 3 行上（标题、正文、参数表引导句）。靠数字对不上，这正是上面那个脚本存在的理由。
+
+`assets/icon.svg` 两版必须完全相同（脚本会比对哈希）。改动图标要同时更新两处。
 
 ## 一次 PR 只做一件事
 

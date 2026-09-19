@@ -58,7 +58,9 @@
 │   └── design-notes.md         双版本差异与设计取舍
 ├── examples/
 │   └── session-walkthrough.md  一场典型访谈长什么样
-├── .github/                    议题与 PR 模板
+├── scripts/
+│   └── check-skill.sh          零依赖完整性校验（维护者用，不参与技能运行）
+├── .github/                    议题与 PR 模板 + CI
 ├── CHANGELOG.md
 ├── CONTRIBUTING.md
 └── LICENSE
@@ -169,11 +171,17 @@ WorkBuddy 下技能选择器里叫 **req**；Codex 下可在技能选择器中�
 - 不会自动切换计划模式，也不接管实现、测试、代码审查。
 - **需求确认 ≠ 开发计划确认，更不等于授权执行有风险的操作。**
 - 不索取密码、密钥或真实敏感数据，用脱敏样例讨论字段和流程。
-- 纯提示词实现：**无脚本、无依赖、无网络请求**，`SKILL.md` 可直接通读审计。
+- 技能本体是纯提示词实现：**无脚本、无依赖、无网络请求**，`SKILL.md` 可直接通读审计。仓库另带一个零依赖的校验脚本 `scripts/check-skill.sh`，只供维护者本地与 CI 使用，**不参与技能运行**。
 
 ## 贡献
 
 欢迎提 Issue 和 PR。这个仓库里 **`SKILL.md` 不是散文，是代码**——改一个词就可能改变 Agent 行为，所以任何措辞改动都需要附上改动前后的实测对比。细则见 [`CONTRIBUTING.md`](CONTRIBUTING.md)。
+
+改完先在本地跑一遍校验（CI 会跑同一份脚本）：
+
+```bash
+bash scripts/check-skill.sh
+```
 
 ## 更新记录
 

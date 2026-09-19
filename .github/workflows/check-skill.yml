@@ -1,0 +1,21 @@
+name: 技能完整性校验
+
+# 这个仓库把 SKILL.md 当代码看：改一个词就可能改变 Agent 行为。
+# 因此把 CONTRIBUTING.md 里的规则做成可执行断言，每次推送和 PR 都跑一遍。
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 检出代码
+        uses: actions/checkout@v4
+
+      - name: 运行 scripts/check-skill.sh
+        run: bash scripts/check-skill.sh
