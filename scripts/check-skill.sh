@@ -120,12 +120,16 @@ head_ '5. 行尾'
 cr_files=''
 while IFS= read -r f; do
   [ -f "$f" ] || continue
+  # binary 宏包含 -text；二进制资源中的 0d 字节不是文本行尾。
+  case "$(git check-attr text -- "$f" 2>/dev/null)" in
+    *': text: unset') continue ;;
+  esac
   n=$(od -An -v -tx1 "$f" | tr ' ' '\n' | grep -c '^0d$')
   [ "$n" != '0' ] && cr_files="$cr_files $f($n)"
 done <<EOF
 $(git ls-files 2>/dev/null || find . -type f -not -path './.git/*')
 EOF
-if [ -z "$cr_files" ]; then pass '所有入库文件均为 LF（无 CR 字节）'; else fail "存在 CRLF 文件：$cr_files"; fi
+if [ -z "$cr_files" ]; then pass '所有入库文本文件均为 LF（无 CR 字节）'; else fail "文本文件存在 CR 字节：$cr_files"; fi
 
 # ─── 6. 技能正文不得含个人信息 / 本机路径 ──────────────────────
 head_ '6. 技能正文卫生'

@@ -174,6 +174,15 @@ WorkBuddy 下技能选择器里叫 **req**；Codex 下可在技能选择器中�
 - 不索取密码、密钥或真实敏感数据，用脱敏样例讨论字段和流程。
 - 技能本体是纯提示词实现：**无脚本、无依赖、无网络请求**，`SKILL.md` 可直接通读审计。仓库另带一个零依赖的校验脚本 `scripts/check-skill.sh`，只供维护者本地与 CI 使用，**不参与技能运行**。
 
+## 交流与反馈
+
+欢迎交流使用体验和改进建议。遇到问题时，也可以通过 [Issues](https://github.com/Cunzhang0703/req-interview-skill/issues) 提供使用场景、报错信息和复现步骤，便于跟进。
+
+| 个人微信 | 微信群 |
+| :---: | :---: |
+| <a href="docs/contact/wechat-contact.jpg"><img src="docs/contact/wechat-contact.jpg" width="320" alt="个人微信好友二维码"></a> | <a href="docs/contact/wechat-group.jpg"><img src="docs/contact/wechat-group.jpg" width="320" alt="微信群二维码"></a> |
+| 扫码添加微信；这是好友二维码，不是微信群入口 | 扫码添加微信群；过期的话扫码图一拉你进群 |
+
 ## 贡献
 
 欢迎提 Issue 和 PR。这个仓库里 **`SKILL.md` 不是散文，是代码**——改一个词就可能改变 Agent 行为，所以任何措辞改动都需要附上改动前后的实测对比。细则见 [`CONTRIBUTING.md`](CONTRIBUTING.md)。
